@@ -2,6 +2,8 @@
 
 **Get Inspire Impact Scores for all stocks in an ETF, and visualize score distribution.**
 
+![Inspire Impact Score Distribution](visualization/score_distribution.png)
+
 This repo provides everything you need to:
 
 - Input a CSV of stock tickers held by any (Catholic, Vatican, or other) ETF (`input_tickers.csv`).
@@ -50,4 +52,3 @@ Data, scripting, and visualization by [BenBitang](https://github.com/BenBitang)
 ---
 
 *This project is for educational and demonstration purposes only. No investment advice is given.*
-

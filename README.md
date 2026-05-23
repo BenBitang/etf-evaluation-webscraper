@@ -6,7 +6,7 @@
 
 This repo provides everything you need to:
 
-- Input a CSV of stock tickers held by any (Catholic, Vatican, or other) ETF (`input_tickers.csv`).
+- Input a CSV of stock tickers held by any ETF (`input_tickers.csv`).
 - Scrape Inspire Impact Scores for those tickers from inspireinsight.com with the included Python script.
 - Output a results CSV (e.g., `inspire_scores_20260305.csv`), ready for further analysis or visualization.
 - See and recreate a Power BI visualization of the impact score distribution (`visualization/score_distribution.png`).

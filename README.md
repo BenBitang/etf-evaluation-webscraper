@@ -1,54 +1,54 @@
 # ETF Evaluation Webscraper
 
-**Get Inspire Impact Scores for all stocks in an ETF, and visualize score distribution.**
+**Erhalte Inspire Impact Scores für alle Aktien in einem ETF und visualisiere die Score-Verteilung.**
 
-![Inspire Impact Score Distribution](visualization/score_distribution.png)
+![Inspire Impact Score Verteilung](visualization/score_distribution.png)
 
-This repo provides everything you need to:
+Dieses Repository stellt alles bereit, was du brauchst, um:
 
-- Input a CSV of stock tickers held by any ETF (`input_tickers.csv`).
-- Scrape Inspire Impact Scores for those tickers from inspireinsight.com with the included Python script.
-- Output a results CSV (e.g., `inspire_scores_20260305.csv`), ready for further analysis or visualization.
-- See and recreate a Power BI visualization of the impact score distribution (`visualization/score_distribution.png`).
+- Eine CSV mit den Aktiensymbolen (Tickern) eines beliebigen ETFs einzulesen (`input_tickers.csv`).
+- Die Inspire Impact Scores für diese Ticker mittels des enthaltenen Python-Skripts von inspireinsight.com abzufragen.
+- Eine Ergebnis-CSV (z.B. `inspire_scores_20260305.csv`) zu erhalten, bereit für weitere Analyse oder Visualisierung.
+- Eine Power BI-Visualisierung der Score-Verteilung zu sehen oder nachzubauen (`visualization/score_distribution.png`).
 
 ---
 
-## Quick Start
+## Schnellstart
 
-1. **Prepare your tickers:** Edit `input_tickers.csv` to your target ETF's holdings (sample provided).
-2. **Run the scraper:**
+1. **Ticker vorbereiten:** Bearbeite `input_tickers.csv` mit den gewünschten ETF-Bestandteilen (Beispiel ist enthalten).
+2. **Scraper ausführen:**
    ```bash
    pip install -r requirements.txt
    playwright install
    python fetch_inspire_scores.py
    ```
-   Output will be saved as a dated CSV (`inspire_scores_YYYYMMDD.csv`).
-3. **Visualize:** Load the output CSV into Power BI (or Excel, etc.) using "Inspire Impact Score" for analysis. Example: see `visualization/score_distribution.png`.
+   Das Ergebnis wird als CSV mit Datum gespeichert (`inspire_scores_YYYYMMDD.csv`).
+3. **Visualisieren:** Lade die Ergebnis-CSV in Power BI (oder Excel o.ä.) und analysiere die "Inspire Impact Scores". Beispiel siehe `visualization/score_distribution.png`.
 
 ---
 
-## Files & Structure
+## Dateien & Struktur
 
-- `input_tickers.csv` — Input: List of ETF stock tickers & names.
-- `inspire_scores_*.csv` — Output: Stocks, names, and their Inspire Impact Scores.
-- `fetch_inspire_scores.py` — Python3 script to scrape scores.
-- `requirements.txt` — Dependencies for quick install.
-- `visualization/` — Contains the Power BI (or other) score distribution image and documentation.
-
----
-
-## About the Data
-
-- **Input:** Any ETF stock list (here, a Catholic ETF, anonymized for privacy).
-- **Scrape:** Inspire Impact Scores quantify "biblical compatibility" of each company, as defined on `inspireinsight.com`.
-- **Output:** CSV with tickers, company names, and scores (-100 = least compatible, +100 = most compatible).
+- `input_tickers.csv` — Eingabe: Liste der ETF-Aktienticker & Namen
+- `inspire_scores_*.csv` — Ausgabe: Aktien, Namen & deren Inspire Impact Scores
+- `fetch_inspire_scores.py` — Python3-Skript zum Scrapen der Scores
+- `requirements.txt` — Abhängigkeiten für die schnelle Installation
+- `visualization/` — Enthält das Power BI-Bild und Dokumentation zur Score-Verteilung
 
 ---
 
-## Author
+## Über die Daten
 
-Data, scripting, and visualization by [BenBitang](https://github.com/BenBitang)
+- **Eingabe:** Beliebige ETF-Aktienliste (hier: ein katholischer ETF, anonymisiert zur Wahrung der Privatsphäre)
+- **Scraping:** Inspire Impact Scores quantifizieren die „biblische Kompatibilität“ jedes Unternehmens, wie auf inspireinsight.com definiert.
+- **Ausgabe:** CSV mit Tickern, Firmennamen und Scores (-100 = am wenigsten kompatibel, +100 = am kompatibelsten)
 
 ---
 
-*This project is for educational and demonstration purposes only. No investment advice is given.*
+## Autor
+
+Daten, Skripting und Visualisierung von [BenBitang](https://github.com/BenBitang)
+
+---
+
+*Dieses Projekt dient nur zu Bildungs- und Demonstrationszwecken. Es handelt sich nicht um eine Anlageberatung.*

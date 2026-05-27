@@ -23,7 +23,6 @@ inspireinsight.com ist eine Seite, die Aktien ethisch bewertet.
 Dabei kriegen Unternehmen mit guten Arbeitsbedingungen einen positiven Score bis zu 100,
 während schlechte Unternehmen mit fraglicher Ethik mit einer negativen Zahl bis zu -100 gekennzeichnet werden.
 
-Da ich mich in meiner Freizeit auch für philosophische bzw. religiöse Themen interessiere und letztens ein Vatikan ETF an die Börse gegangen ist,
-habe ich mich entschieden das Projekt an ihm zur demonstration auszuprobieren, wovon man unten das Ergebnis sieht:
+Beispiel einer solchen ETF-Aktien-Analyse anhand des globalen CATH ETF:
 
-![Inspire Impact Score Verteilung](visualization/score_dist.png)
+![Inspire Impact Score Verteilung](visualization/etf_dist.png)

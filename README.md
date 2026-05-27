@@ -23,6 +23,6 @@ inspireinsight.com ist eine Seite, die Aktien ethisch bewertet.
 Dabei kriegen Unternehmen mit guten Arbeitsbedingungen einen positiven Score bis zu 100,
 während schlechte Unternehmen mit fraglicher Ethik mit einer negativen Zahl bis zu -100 gekennzeichnet werden.
 
-Beispiel einer solchen ETF-Aktien-Analyse anhand des globalen CATH ETF:
+Beispiel einer solchen ETF-Aktien-Analyse anhand des globalen CATH-ETF:
 
 ![Inspire Impact Score Verteilung](visualization/etf_dist.png)

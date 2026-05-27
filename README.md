@@ -11,7 +11,7 @@
 
 ## Funktionsweise
 
-1. benötigte libraries aus requirements.txt herunterladen (z.B. mit Hilfe von pip)
+1. benötigte libraries aus requirements.txt herunterladen (z.B. mithilfe von pip)
 2. Aktien eines ETFs zusammen mit deren Ticker in eine .csv Datei eintragen
 3. in fetch_inspire_scores.py den Pfad der .csv eingeben
 4. fetch_inspire_scores.py ausführen

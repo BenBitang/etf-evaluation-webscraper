@@ -1,31 +1,4 @@
-# ETF Evaluation Webscraper
-
-**Erhalte Inspire Impact Scores für alle Aktien in einem ETF und visualisiere die Score-Verteilung.**
-
-![Inspire Impact Score Verteilung](visualization/score_dist.png)
-
-Dieses Repository stellt alles bereit, was du brauchst, um:
-
-- Eine CSV mit den Aktiensymbolen (Tickern) eines beliebigen ETFs einzulesen (`input_tickers.csv`).
-- Die Inspire Impact Scores für diese Ticker mittels des enthaltenen Python-Skripts von inspireinsight.com abzufragen.
-- Eine Ergebnis-CSV (z.B. `inspire_scores_20260305.csv`) zu erhalten, bereit für weitere Analyse oder Visualisierung.
-- Eine Power BI-Visualisierung der Score-Verteilung zu sehen oder nachzubauen (`visualization/score_distribution.png`).
-
----
-
-## Schnellstart
-
-1. **Ticker vorbereiten:** Bearbeite `input_tickers.csv` mit den gewünschten ETF-Bestandteilen (Beispiel ist enthalten).
-2. **Scraper ausführen:**
-   ```bash
-   pip install -r requirements.txt
-   playwright install
-   python fetch_inspire_scores.py
-   ```
-   Das Ergebnis wird als CSV mit Datum gespeichert (`inspire_scores_YYYYMMDD.csv`).
-3. **Visualisieren:** Lade die Ergebnis-CSV in Power BI (oder Excel o.ä.) und analysiere die "Inspire Impact Scores". Beispiel siehe `visualization/score_distribution.png`.
-
----
+# ETF Aktien Bewertung mithilfe von Webscraping
 
 ## Dateien & Struktur
 
@@ -35,20 +8,22 @@ Dieses Repository stellt alles bereit, was du brauchst, um:
 - `requirements.txt` — Abhängigkeiten für die schnelle Installation
 - `visualization/` — Enthält das Power BI-Bild und Dokumentation zur Score-Verteilung
 
----
 
-## Über die Daten
+## Funktionsweise
 
-- **Eingabe:** Beliebige ETF-Aktienliste (hier: ein katholischer ETF, anonymisiert zur Wahrung der Privatsphäre)
-- **Scraping:** Inspire Impact Scores quantifizieren die „biblische Kompatibilität“ jedes Unternehmens, wie auf inspireinsight.com definiert.
-- **Ausgabe:** CSV mit Tickern, Firmennamen und Scores (-100 = am wenigsten kompatibel, +100 = am kompatibelsten)
+1. benötigte libraries aus requirements.txt herunterladen (z.B. mit Hilfe von pip)
+2. Aktien eines ETFs zusammen mit deren Ticker in eine .csv Datei eintragen
+3. in fetch_inspire_scores.py den Pfad der .csv eingeben
+4. fetch_inspire_scores.py ausführen
+5. Output: .csv Datei mit den Aktienscores von inspireinsight.com
 
----
+## Hintergrund und Erklärung des Scores
 
-## Autor
+inspireinsight.com ist eine Seite, die Aktien ethisch bewertet.
+Dabei kriegen Unternehmen mit guten Arbeitsbedingungen einen positiven Score bis zu 100,
+während schlechte Unternehmen mit fraglicher Ethik mit einer negativen Zahl bis zu -100 gekennzeichnet werden.
 
-Daten, Skripting und Visualisierung von [BenBitang](https://github.com/BenBitang)
+Da ich mich in meiner Freizeit auch für philosophische bzw. religiöse Themen interessiere und letztens ein Vatikan ETF an die Börse gegangen ist,
+habe ich mich entschieden das Projekt an ihm zur demonstration auszuprobieren, wovon man unten das Ergebnis sieht:
 
----
-
-*Dieses Projekt dient nur zu Bildungs- und Demonstrationszwecken. Es handelt sich nicht um eine Anlageberatung.*
+![Inspire Impact Score Verteilung](visualization/score_dist.png)

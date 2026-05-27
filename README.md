@@ -2,7 +2,7 @@
 
 **Erhalte Inspire Impact Scores für alle Aktien in einem ETF und visualisiere die Score-Verteilung.**
 
-![Inspire Impact Score Verteilung](visualization/score_distribution.png)
+![Inspire Impact Score Verteilung](visualization/score_dist.png)
 
 Dieses Repository stellt alles bereit, was du brauchst, um:
 
